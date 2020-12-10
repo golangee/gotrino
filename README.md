@@ -10,8 +10,8 @@ frameworks, one can attach modifiers with a live element, without replacing any 
 expensive delta-dom computations.
 
 ## What is a *wui*?
-wui is an abbreviation for *web user interface*. It is the successor of *forms* which itself was not abstract enough
-to justify that name. *wui* is a very small core with the most important functions to drive a *wasm* web app.
+wui is an abbreviation for *worldiety web user interface*. It is the successor of *forms* which itself was not abstract 
+enough to justify that name. *wui* is a very small core with the most important functions to drive a *wasm* web app.
 
 See also https://github.com/golangee/html for a convenience library to build your own Component.
 
