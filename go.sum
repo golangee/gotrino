@@ -1,0 +1,4 @@
+github.com/golangee/dom v0.0.0-20201210093916-f81538256b51 h1:2aNFECOklq4tS9NTxhjLNrFryKjSPSa/yfwRy2HYUsE=
+github.com/golangee/dom v0.0.0-20201210093916-f81538256b51/go.mod h1:MV/9eGmwLM6eK4vQoTyai6f8eMIR1Ye9r3AqtlHU/ts=
+github.com/golangee/property v0.0.0-20201210101032-527a9915f02f h1:m7nyIJTCyM4ZTNtCSeP47h/+3lvF/zU8QyqsQB5E5tQ=
+github.com/golangee/property v0.0.0-20201210101032-527a9915f02f/go.mod h1:Z8QLRlSe+ZuhI67xD93EUIQ2nCEGBvX9LSuVcWhK+0U=
