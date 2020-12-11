@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package wui
+package gotrino
 
 // InlineView is a helper to define views in an abstract way, without the
 // need to declare a (private) struct with the according method.

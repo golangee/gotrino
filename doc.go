@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package wui provides a Renderable abstraction for manipulating the html dom. It provides three base building
+// Package gotrino provides a Renderable abstraction for manipulating the html dom. It provides three base building
 // blocks: Node, Modifier and Component. A Node allocates dom elements, a Modifier changes it by either
 // modifying attributes are using other Node instances to append elements or a Component which returns a Node
 // to allocate and modify an Element but also connects it with a lifecycle, as long as it is alive. Detaching
 // an Element will release it (mostly listeners connected to a Component). Subsequent Component.Render calls
 // will allocate another Element and attach until released (and/or re-rendered).
-package wui
+package gotrino

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package wui
+package gotrino
 
 // A Resource release method should be called for any resource, as soon as it is not required anymore to avoid
 // memory leaks. Afterwards the Resource must not be used anymore.

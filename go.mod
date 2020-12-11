@@ -1,4 +1,4 @@
-module github.com/golangee/wui
+module github.com/golangee/gotrino
 
 go 1.15
 
