@@ -1,4 +1,4 @@
-# gotrino [![GoDoc](https://godoc.org/github.com/golangee/gotrino?status.svg)](http://godoc.org/github.com/golangee/gotrino)
+# gotrino [![Go Reference](https://pkg.go.dev/badge/github.com/golangee/gotrino.svg)](https://pkg.go.dev/github.com/golangee/gotrino)
 Package gotrino provides a Renderable abstraction for manipulating the html dom. It provides three base building
 blocks: Node, Modifier and Component. A Node allocates dom elements whereas a Modifier changes it by either
 modifying attributes are using other Node instances to append elements. Lastly, a Component returns a Node
