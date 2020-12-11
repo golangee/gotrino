@@ -160,7 +160,7 @@ func With(r Renderable, mods ...Modifier) Renderable {
 			}
 		})
 	default:
-		panic(reflect.TypeOf(r).String())
+		panic("neither Component, Node nor Modifier: " + reflect.TypeOf(r).String())
 	}
 }
 
@@ -195,7 +195,7 @@ func Yield(r ...Renderable) Renderable {
 
 // WithComponent post-modifies the given Component for each future rendering.
 func WithComponent(r Component, mods ...Modifier) Component {
-	r.setPostModifiers(mods)
+	r.setPostModifiers(mods...)
 
 	return r
 }

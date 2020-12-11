@@ -36,7 +36,7 @@ type Component interface {
 	Renderable
 
 	getPostModifiers() []Modifier
-	setPostModifiers(mods []Modifier)
+	setPostModifiers(mods ...Modifier)
 }
 
 // RenderBody clears the body of the page and applies the given Renderable.
