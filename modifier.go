@@ -16,7 +16,7 @@ package gotrino
 
 import "github.com/golangee/dom"
 
-// Modifier is Renderable which changes attributes or contents of the given dom.Element.
+// Modifier is a Renderable which changes attributes or contents of the given dom.Element.
 type Modifier interface {
 	// Modify applies its changes to the given element.
 	Modify(e dom.Element)

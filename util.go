@@ -137,6 +137,25 @@ func IfCond(p *property.Bool, pos, neg Modifier) Modifier {
 	})
 }
 
+// Observe attaches a property observer and calls onDidSet for each observed change without causing an entire
+// re-rendering. This improves performance a lot. Be careful and do not leak the given element. The returned
+// Modifier is allowed to be nil.
+func Observe(p *property.Property, onDidSet func(e dom.Element) Modifier) Modifier {
+	return ModifierFunc(func(e dom.Element) {
+		if m := onDidSet(e); m != nil {
+			m.Modify(e)
+		}
+
+		h := p.Observe(func(old, new interface{}) {
+			if m := onDidSet(e); m != nil {
+				m.Modify(e)
+			}
+		})
+
+		e.AddReleaseListener(h.Release)
+	})
+}
+
 // With post-modifies the given Renderable for each future rendering.
 func With(r Renderable, mods ...Modifier) Renderable {
 	switch t := r.(type) {
@@ -164,8 +183,8 @@ func With(r Renderable, mods ...Modifier) Renderable {
 	}
 }
 
-// InsideDom invokes the callback for each invocations. Be careful not to leak the element. Think twice before
-// using and consider dom.Element#AddReleaseListener.
+// InsideDom invokes the callback for each invocation. Be careful not to leak the element. Think twice before
+// using and consider dom.Element#AddReleaseListener. See also IfCond and Observe for alternatives.
 func InsideDom(f func(e dom.Element)) Modifier {
 	return ModifierFunc(func(e dom.Element) {
 		f(e)
